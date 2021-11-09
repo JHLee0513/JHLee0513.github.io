@@ -1,3 +1,5 @@
+Source: https://github.com/evanca/quick-portfolio
+
 ## Developer Portfolio Landing Page Template
 
 ### Introduction
