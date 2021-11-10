@@ -16,7 +16,7 @@ Abstract: Producing dense and accurate traversability maps is crucial for autono
 </p>
 
 ### Research
-[Into the Wild: Robust Offroad Driving with Deep Perception](/pdf/JoonHo_thesis.pdf)
+[Into the Wild: Robust Offroad Driving with Deep Perception](<a target='_blank' href='/pdf/JoonHo_thesis.pdf'>PDF</a>)
 <img src="images/canal.png?raw=true"/>
 <br></br>
 <b>
