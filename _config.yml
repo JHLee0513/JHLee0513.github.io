@@ -1,7 +1,7 @@
 title: Brian Lee # your name (or website title) here
 logo: "/images/brian.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description
+  I'm a Masters student in the Paul G. Allen School of Computer Science & Engineering at the University of Washington, joining the <a target='_blank' href='https://robotlearning.cs.washington.edu/'>UW Robot Learning Lab</a> in Spring 2021. My research focuses on Robotic Vision and Deep Learning. I also recently received my BS degree at the University of Washington.
   <br><br>
   Second description
   <br><br>
@@ -13,7 +13,6 @@ google_analytics: UA-000000-0 # your Google Analytics tracking ID here
 #title: JoonHo Lee # your name (or website title) here
 #logo: "/images/me.png?raw=true" # your photo (or logo) here
 #description: > # your text below (remove <br> elements if you don't need line breaks)
-##  I'm a Masters student in the Paul G. Allen School of Computer Science & Engineering at the University of Washington, joining the <a target='_blank' href='https://robotlearning.cs.washington.edu/'>UW Robot Learning Lab</a> in Spring 2021. My research focuses on Robotic Vision and Deep Learning. I also recently received my BS degree at the University of Washington.
 #  <br><br>
 #  <a href="https://github.com/JHLee0513">Github</a>
 #  <br><br>
