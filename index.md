@@ -6,6 +6,7 @@
 
 [Semantic Terrain Classification for Off-Road Autonomous Driving](https://openreview.net/forum?id=AL4FPs84YdQ)
 <img src="images/warthog.png?raw=true"/>
+<img src="images/canal.gif?raw=true"/>
 <br></br>
 <b>
 Accepted Conference on Robot Learning (CoRL) 2021
