@@ -4,11 +4,10 @@
 
 ## Publications 
 
-###Semantic Terrain Classification for Off-Road Autonomous Driving
+### Semantic Terrain Classification for Off-Road Autonomous Driving
 [Openreview](https://openreview.net/forum?id=AL4FPs84YdQ) [Website](https://sites.google.com/view/terrain-traversability/home)
 <img src="images/warthog.png?raw=true"/>
 <img src="images/canal.gif?raw=true"/>
-<br></br>
 <b>
 Accepted Conference on Robot Learning (CoRL) 2021
 </b>
@@ -18,9 +17,9 @@ Abstract: Producing dense and accurate traversability maps is crucial for autono
 
 ## Research Projects
 ### Into the Wild: Robust Offroad Driving with Deep Perception
-[PDF](<a target='_blank' href='/pdf/JoonHo_thesis.pdf'>PDF</a>)
+<a href='/pdf/JoonHo_thesis.pdf'>PDF</a>
 <img src="images/canal.png?raw=true"/>
-<br></br>
+
 <b>
 Undergraduate Honors Thesis
 </b>
@@ -28,8 +27,9 @@ Undergraduate Honors Thesis
 Abstract: The task of autonomous offroad driving yields great potential for various beneficial applications, including but not limited to remote disaster relief, environment survey, and agricultural robotics. While achieving the task of robust offroad driving poses relatively new, interesting challenges to tackle, the most important requirement for a successful offroad autonomy is observed to be an effective understanding of the vehicle surrounding for robust navigation and driving. Therefore, in this thesis we tackle the task of scene understanding for autonomous offroad driving. We formulate the task of scene understanding as a traversability classification task, and develop a multimodal perception framework that extracts semantic knowledge. As our key contribution we propose a multimodal perception framework that uses convolutional neural networks with image and LiDAR input. The pipeline generates semantic knowledge from input data for robust mapping, planning, and control in the wild environment. We evaluate our method by integrating it into an autonomy stack and demonstrating its performance in a set of environments under various weather conditions.
 </p>
 
-<b>Real robot demo</b>
-<iframe width="420" height="315" src="https://drive.google.com/file/d/1sIeUbgDd8afi5JGbzG5d-CnP89kmpiJs/view?usp=sharing" frameborder="0" allowfullscreen></iframe>
+<b>Real Robot Demo</b>
+<iframe width="420" height="315" src="https://youtu.be/Ze9WJevj-Hw" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="https://youtu.be/w5pjYyfmYsI" frameborder="0" allowfullscreen></iframe>
 ---
 
 [comment]: <> ([Project 3 Title]&#40;http://example.com/&#41;)
