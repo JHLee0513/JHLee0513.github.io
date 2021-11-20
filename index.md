@@ -17,7 +17,7 @@ Abstract: Producing dense and accurate traversability maps is crucial for autono
 
 ## Research Projects
 ### Into the Wild: Robust Offroad Driving with Deep Perception
-<a href='/pdf/JoonHo_thesis.pdf'>PDF</a>
+<a href='pdf/JoonHo_thesis.pdf'>PDF</a>
 <img src="images/canal.png?raw=true"/>
 
 <b>
@@ -26,6 +26,8 @@ Undergraduate Honors Thesis
 <p>
 Abstract: The task of autonomous offroad driving yields great potential for various beneficial applications, including but not limited to remote disaster relief, environment survey, and agricultural robotics. While achieving the task of robust offroad driving poses relatively new, interesting challenges to tackle, the most important requirement for a successful offroad autonomy is observed to be an effective understanding of the vehicle surrounding for robust navigation and driving. Therefore, in this thesis we tackle the task of scene understanding for autonomous offroad driving. We formulate the task of scene understanding as a traversability classification task, and develop a multimodal perception framework that extracts semantic knowledge. As our key contribution we propose a multimodal perception framework that uses convolutional neural networks with image and LiDAR input. The pipeline generates semantic knowledge from input data for robust mapping, planning, and control in the wild environment. We evaluate our method by integrating it into an autonomy stack and demonstrating its performance in a set of environments under various weather conditions.
 </p>
+<img src="images/snow.gif?raw=true"/>
+<img src="images/weeds_combined.gif?raw=true"/>
 
 <b>Real Robot Demo</b>
 <iframe width="420" height="315" src="https://youtu.be/Ze9WJevj-Hw" frameborder="0" allowfullscreen></iframe>
