@@ -29,9 +29,8 @@ Abstract: The task of autonomous offroad driving yields great potential for vari
 <img src="images/snow.gif?raw=true"/>
 <img src="images/weeds_combined.gif?raw=true"/>
 
-<b>Real Robot Demo</b>
-<iframe width="420" height="315" src="https://youtu.be/Ze9WJevj-Hw" frameborder="0" allowfullscreen></iframe>
-<iframe width="420" height="315" src="https://youtu.be/w5pjYyfmYsI" frameborder="0" allowfullscreen></iframe>
+Full videos [Snow](https://youtu.be/Ze9WJevj-Hw) [Weeds](https://youtu.be/w5pjYyfmYsI)
+
 ---
 
 [comment]: <> ([Project 3 Title]&#40;http://example.com/&#41;)
