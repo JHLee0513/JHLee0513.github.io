@@ -38,8 +38,17 @@ Full videos [Weeds](https://youtu.be/Ze9WJevj-Hw) [Snow](https://youtu.be/w5pjYy
 ## Miscellaneous Projects
 
 ### RGB 6D Pose estimation for road vehicles
+<a href='https://www.kaggle.com/c/pku-autonomous-driving'>Kaggle</a>
+<br>
+Report(TBD)
 ### Dirt Segmentation
+<a href='dirt.md'>Technical Report</a>
+<br>
+<a href='dirt.md'>Poster</a> 
 ### Diabetic Retionpathy Classification
+<a href='https://www.kaggle.com/c/aptos2019-blindness-detection'>Kaggle</a>
+<br>
+Report(TBD)
 
 [comment]: <> ([Project 3 Title]&#40;http://example.com/&#41;)
 
