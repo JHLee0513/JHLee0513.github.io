@@ -17,7 +17,9 @@ Abstract: Producing dense and accurate traversability maps is crucial for autono
 
 ## Research Projects
 ### Into the Wild: Robust Offroad Driving with Deep Perception
-<a href='pdf/JoonHo_thesis.pdf'>PDF</a>
+<a href='thesis.md'>PDF</a>
+
+[comment]: <> (<a href='pdf/JoonHo_thesis.pdf'>PDF</a>)
 <img src="images/canal.png?raw=true"/>
 
 <b>
@@ -29,9 +31,15 @@ Abstract: The task of autonomous offroad driving yields great potential for vari
 <img src="images/snow.gif?raw=true"/>
 <img src="images/weeds_combined.gif?raw=true"/>
 
-Full videos [Snow](https://youtu.be/Ze9WJevj-Hw) [Weeds](https://youtu.be/w5pjYyfmYsI)
+Full videos [Weeds](https://youtu.be/Ze9WJevj-Hw) [Snow](https://youtu.be/w5pjYyfmYsI)
 
 ---
+
+## Miscellaneous Projects
+
+### RGB 6D Pose estimation for road vehicles
+### Dirt Segmentation
+### Diabetic Retionpathy Classification
 
 [comment]: <> ([Project 3 Title]&#40;http://example.com/&#41;)
 
