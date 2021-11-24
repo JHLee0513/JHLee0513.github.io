@@ -5,11 +5,12 @@
 ## Publications 
 
 ### Semantic Terrain Classification for Off-Road Autonomous Driving
-[Openreview](https://openreview.net/forum?id=AL4FPs84YdQ) [Website](https://sites.google.com/view/terrain-traversability/home)
+[Paper](https://openreview.net/forum?id=AL4FPs84YdQ) [Website](https://sites.google.com/view/terrain-traversability/home)
 <img src="images/warthog.png?raw=true"/>
 <img src="images/canal.gif?raw=true"/>
 <b>
-Accepted Conference on Robot Learning (CoRL) 2021
+<br>
+Accepted 4th Conference on Robot Learning (CoRL) 2021
 </b>
 <p>
 Abstract: Producing dense and accurate traversability maps is crucial for autonomous off-road navigation. In this paper, we focus on the problem of classifying terrains into 4 cost classes (free, low-cost, medium-cost, obstacle) for traversability assessment. This requires a robot to reason about both semantics (what objects are present?) and geometric properties (where are the objects located?) of the environment. To achieve this goal, we develop a novel Bird's Eye View Network (BEVNet), a deep neural network that directly predicts a local map encoding terrain classes from sparse LiDAR inputs. BEVNet processes both geometric and semantic information in a temporally consistent fashion. More importantly, it uses learned prior and history to predict terrain classes in unseen space and into the future, allowing a robot to better appraise its situation. We quantitatively evaluate BEVNet on both on-road and off-road scenarios and show that it outperforms a variety of strong baselines.
@@ -17,38 +18,43 @@ Abstract: Producing dense and accurate traversability maps is crucial for autono
 
 ## Research Projects
 ### Into the Wild: Robust Offroad Driving with Deep Perception
-<a href='thesis.md'>PDF</a>
 
 [comment]: <> (<a href='pdf/JoonHo_thesis.pdf'>PDF</a>)
 <img src="images/canal.png?raw=true"/>
+<img src="images/snow.gif?raw=true"/>
+<img src="images/weeds_combined.gif?raw=true"/>
+<br>
+<b>Undergraduate Honors Thesis</b>
+<br>
+<a href='thesis.md'>PDF</a>
+<br>
+Demo Videos: [Weeds](https://youtu.be/Ze9WJevj-Hw) [Snow](https://youtu.be/w5pjYyfmYsI)
+<br>
 
-<b>
-Undergraduate Honors Thesis
-</b>
 <p>
 Abstract: The task of autonomous offroad driving yields great potential for various beneficial applications, including but not limited to remote disaster relief, environment survey, and agricultural robotics. While achieving the task of robust offroad driving poses relatively new, interesting challenges to tackle, the most important requirement for a successful offroad autonomy is observed to be an effective understanding of the vehicle surrounding for robust navigation and driving. Therefore, in this thesis we tackle the task of scene understanding for autonomous offroad driving. We formulate the task of scene understanding as a traversability classification task, and develop a multimodal perception framework that extracts semantic knowledge. As our key contribution we propose a multimodal perception framework that uses convolutional neural networks with image and LiDAR input. The pipeline generates semantic knowledge from input data for robust mapping, planning, and control in the wild environment. We evaluate our method by integrating it into an autonomy stack and demonstrating its performance in a set of environments under various weather conditions.
 </p>
-<img src="images/snow.gif?raw=true"/>
-<img src="images/weeds_combined.gif?raw=true"/>
-
-Full videos [Weeds](https://youtu.be/Ze9WJevj-Hw) [Snow](https://youtu.be/w5pjYyfmYsI)
 
 ---
 
 ## Miscellaneous Projects
 
-### RGB 6D Pose estimation for road vehicles
-<a href='https://www.kaggle.com/c/pku-autonomous-driving'>Kaggle</a>
-<br>
-Report(TBD)
 ### Dirt Segmentation
 <a href='dirt.md'>Technical Report</a>
 <br>
 <a href='dirt.md'>Poster</a> 
-### Diabetic Retionpathy Classification
-<a href='https://www.kaggle.com/c/aptos2019-blindness-detection'>Kaggle</a>
+
+### RGB 6D Pose estimation for road vehicles
+<a href='https://www.kaggle.com/c/pku-autonomous-driving'>Competition website</a>
 <br>
-Report(TBD)
+Position: [45th/833]
+<br>
+
+### Diabetic Retionpathy Classification
+<a href='https://www.kaggle.com/c/aptos2019-blindness-detection'>Competition website</a>
+<br>
+Position: [81st/2943]
+<br>
 
 [comment]: <> ([Project 3 Title]&#40;http://example.com/&#41;)
 
