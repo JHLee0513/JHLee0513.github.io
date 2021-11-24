@@ -26,7 +26,8 @@ Abstract: Producing dense and accurate traversability maps is crucial for autono
 <br>
 <b>Undergraduate Honors Thesis</b>
 <br>
-<a href='JHLee0513.github.io/thesis'>PDF</a>
+
+[PDF](/thesis)
 <br>
 Demo Videos: [Weeds](https://youtu.be/Ze9WJevj-Hw) [Snow](https://youtu.be/w5pjYyfmYsI)
 <br>
@@ -40,9 +41,9 @@ Abstract: The task of autonomous offroad driving yields great potential for vari
 ## Miscellaneous Projects
 
 ### Dirt Segmentation
-<a href='JHLee0513.github.io/dirt'>Technical Report</a>
+[Technical Report](/dirt)
 <br>
-<a href='JHLee0513.github.io/dirt_poster'>Poster</a> 
+[Poster](/dirt_poster)
 
 ### RGB 6D Pose estimation for road vehicles
 <a href='https://www.kaggle.com/c/pku-autonomous-driving'>Competition website</a>
