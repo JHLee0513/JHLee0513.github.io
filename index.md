@@ -26,7 +26,7 @@ Abstract: Producing dense and accurate traversability maps is crucial for autono
 <br>
 <b>Undergraduate Honors Thesis</b>
 <br>
-<a href='thesis.md'>PDF</a>
+<a href='/thesis.md'>PDF</a>
 <br>
 Demo Videos: [Weeds](https://youtu.be/Ze9WJevj-Hw) [Snow](https://youtu.be/w5pjYyfmYsI)
 <br>
