@@ -41,7 +41,7 @@ Abstract: The task of autonomous offroad driving yields great potential for vari
 ## Miscellaneous Projects
 
 ### Dirt Segmentation
-[Technical Report](/pdf/Deep-Learning-final-report.pdf)
+[Technical Report](/pdf/DL_report.pdf)
 <br>
 [Poster](/pdf/dirt_poster.pdf)
 
