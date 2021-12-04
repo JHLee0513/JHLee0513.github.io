@@ -10,7 +10,7 @@
 <img src="images/canal.gif?raw=true"/>
 <b>
 <br>
-Accepted 4th Conference on Robot Learning (CoRL) 2021
+5th Conference on Robot Learning (CoRL) 2021
 </b>
 <p>
 Abstract: Producing dense and accurate traversability maps is crucial for autonomous off-road navigation. In this paper, we focus on the problem of classifying terrains into 4 cost classes (free, low-cost, medium-cost, obstacle) for traversability assessment. This requires a robot to reason about both semantics (what objects are present?) and geometric properties (where are the objects located?) of the environment. To achieve this goal, we develop a novel Bird's Eye View Network (BEVNet), a deep neural network that directly predicts a local map encoding terrain classes from sparse LiDAR inputs. BEVNet processes both geometric and semantic information in a temporally consistent fashion. More importantly, it uses learned prior and history to predict terrain classes in unseen space and into the future, allowing a robot to better appraise its situation. We quantitatively evaluate BEVNet on both on-road and off-road scenarios and show that it outperforms a variety of strong baselines.
