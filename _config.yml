@@ -1,11 +1,13 @@
 title: Brian Lee # your name (or website title) here
 logo: "/images/brian.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  I'm a Masters student in the Paul G. Allen School of Computer Science & Engineering at the University of Washington. I'm advised by Professor Byron Boots in the <a target='_blank' href='https://robotlearning.cs.washington.edu/'>UW Robot Learning Lab</a> since Spring 2021. My research focuses on Robotic Vision and Deep Learning. I also recently received my BS degree at the University of Washington.
+  I'm a Masters student in the Paul G. Allen School of Computer Science & Engineering at the University of Washington. I'm advised by Professor Byron Boots in the <a target='_blank' href='https://robotlearning.cs.washington.edu/'>UW Robot Learning Lab</a> since Spring 2021. My research focuses on Robotic Vision and Deep Learning. I also recently received my BS degree at the University of Washington. My current research interest lie in end-to-end learning for autonomous driving, imitation learning, and generalizable perception (in parituclar domain adaptation).
   <br><br>
   <a href="/pdf/CV_JoonHoLee.pdf">View My CV</a>
   <br>
   <a href="https://www.linkedin.com/in/jhl0513/">View My LinkedIn Profile</a>
+  <br>
+  <a href="blogs.md">View My Blogs on Research</a>
 
 theme: jekyll-theme-minimal
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here

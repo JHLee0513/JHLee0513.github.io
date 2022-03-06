@@ -17,6 +17,11 @@ Abstract: Producing dense and accurate traversability maps is crucial for autono
 </p>
 
 ## Research Projects
+
+### RACER: Robotic Autonomy in Complex Environments with Resiliency
+As part of the UW team, I am working on robotic autonomy for challenging offroad environments.
+[Press release](https://www.darpa.mil/news-events/2022-01-13)
+
 ### Into the Wild: Robust Offroad Driving with Deep Perception
 
 [comment]: <> (<a href='pdf/JoonHo_thesis.pdf'>PDF</a>)
