@@ -21,6 +21,9 @@ Abstract: Producing dense and accurate traversability maps is crucial for autono
 ### RACER: Robotic Autonomy in Complex Environments with Resiliency
 As part of the UW team, I am working on robotic autonomy for challenging offroad environments.
 [Press release](https://www.darpa.mil/news-events/2022-01-13)
+We recently released a few testing videos ran at DirtFish:
+[Test 1](https://youtu.be/ibNW6Vezqpc)
+[Test 2](https://www.youtube.com/watch?v=7-G9uPJ07uQ)
 
 ### Into the Wild: Robust Offroad Driving with Deep Perception
 
