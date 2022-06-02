@@ -44,6 +44,16 @@ Demo Videos: [Weeds](https://youtu.be/Ze9WJevj-Hw) [Snow](https://youtu.be/w5pjY
 Abstract: The task of autonomous offroad driving yields great potential for various beneficial applications, including but not limited to remote disaster relief, environment survey, and agricultural robotics. While achieving the task of robust offroad driving poses relatively new, interesting challenges to tackle, the most important requirement for a successful offroad autonomy is observed to be an effective understanding of the vehicle surrounding for robust navigation and driving. Therefore, in this thesis we tackle the task of scene understanding for autonomous offroad driving. We formulate the task of scene understanding as a traversability classification task, and develop a multimodal perception framework that extracts semantic knowledge. As our key contribution we propose a multimodal perception framework that uses convolutional neural networks with image and LiDAR input. The pipeline generates semantic knowledge from input data for robust mapping, planning, and control in the wild environment. We evaluate our method by integrating it into an autonomy stack and demonstrating its performance in a set of environments under various weather conditions.
 </p>
 
+### Into the Wild: Robust Offroad Driving with Deep Perception
+[comment]: <> (<a href='pdf/clipcap++_report.pdf'>PDF</a>)
+<br>
+<b>NLP capstone project (completed during MS)</b>
+<br>
+[PDF](/pdf/clipcap++_report.pdf)
+<p>
+Abstract: Modern research in Image Captioning typically utilizes transformers to achieve high accuracy. However, these methods at a large scale require both substantial amounts of data and compute, which makes training often challenging. To address this issue, we propose to train a mapping network between a pretrained image encoder and text decoder for efficiency. Our approach, based on ClipCap, explores improved utilization of the pretrained models, yielding improved performance on the COCO Captions dataset while training only the mapping network. This report has been developed as part of a Capstone class (CSE481N, University of Washington), and our code is available on [https://github.com/quocthai9120/UW-NLP-Capstone-SP22](https://github.com/quocthai9120/UW-NLP-Capstone-SP22).
+</p>
+
 ---
 
 ## Miscellaneous Projects
