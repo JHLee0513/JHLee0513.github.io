@@ -1,6 +1,6 @@
-[comment]: <> (## Portfolio)
-
-[comment]: <> (---)
+---
+layout: post
+---
 
 ## Blogs
 
