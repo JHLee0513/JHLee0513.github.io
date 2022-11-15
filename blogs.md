@@ -2,7 +2,7 @@
 
 [comment]: <> (---)
 
-# Blogs
+## Blogs
 
 I try to write blogs, mostly analysis and thoughts on papers relevant to my research interests.
 
@@ -16,8 +16,8 @@ I try to write blogs, mostly analysis and thoughts on papers relevant to my rese
 7. Argo(CMU): -->
 
 ## Offroad Autonomy
-1. Traversability Estimation
-2. 
+<!-- 1. Traversability Estimation
+2.  -->
 
 ## Integrating Learning and Control
 
