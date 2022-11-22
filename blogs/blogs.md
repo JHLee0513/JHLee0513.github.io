@@ -2,11 +2,16 @@
 layout: post
 ---
 
-## Blogs
+# Blogs
 
-I try to write blogs, mostly analysis and thoughts on papers relevant to my research interests.
+Analysis and thoughts on papers relevant to my research interests.
 
 ## Autonomous Driving
+
+1. <a href="/blogs/blogs">Model-Based Imitation Learning for Urban Driving</a>
+
+<!-- 1. <a href="/blogs/bev">BEV Perception</a> -->
+
 <!-- 1. Waabi: Survey on Waabi's approach to Self-Driving
 2. Tesla: Perception-based FSD
 3. Wayve:
@@ -19,16 +24,16 @@ I try to write blogs, mostly analysis and thoughts on papers relevant to my rese
 <!-- 1. Traversability Estimation
 2.  -->
 
-## Integrating Learning and Control
+<!-- ## Integrating Learning and Control -->
 
 ## Self Supervision
 
-## Imitation Learning
+<!-- ## Imitation Learning -->
 <!-- 1. Maximum Margin Planning
 2. Max Ent IRL
 3. Imitation Learning -->
 
-## Multi-task Vision for Autonomous Driving
+<!-- ## Multi-task Vision for Autonomous Driving -->
 
 ---
 <!-- <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p> -->
