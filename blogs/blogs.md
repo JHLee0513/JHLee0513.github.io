@@ -6,10 +6,12 @@ layout: post
 
 Analysis and thoughts on papers relevant to my research interests.
 
-<a href="/blogs/blogs">LiDAR perception based representation learning</a>
+<a href="/blogs/DA">Unsupervised Domain Adaptation for LiDAR Semantic Segmentation</a>
+
+<!-- <a href="/blogs/blogs">LiDAR perception based representation learning</a>
 <a href="/blogs/blogs">Multimodal Fusion for Autonomous Driving Perception</a>
 <a href="/blogs/blogs">Offroad traversability and Vision based control</a>
-<a href="/blogs/blogs">BEV based perception for Urban Autonomous Driving</a>
+<a href="/blogs/blogs">BEV based perception for Urban Autonomous Driving</a> -->
 <!-- ## Autonomous Driving -->
 
 <!-- 1. <a href="/blogs/blogs">Model-Based Imitation Learning for Urban Driving</a> -->
