@@ -8,6 +8,8 @@ Here I share my survey on papers for various topics, and also present any work/p
 
 <a href="/blogs/DA">Unsupervised Domain Adaptation for LiDAR Semantic Segmentation</a>
 
+<a href="blogs/blogs">Onroad autonomy</a>
+<!-- <a href="blogs/SLIC">SLIC Superpixels Compared to State-of-the-art Superpixel Methods</a> -->
 <a href="/blogs/blogs">Offroad autonomy</a>
 
 <!-- Analysis and thoughts on papers relevant to my research interests. -->
