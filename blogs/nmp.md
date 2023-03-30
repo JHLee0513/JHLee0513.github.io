@@ -6,8 +6,10 @@ layout: post
 
 This is a relatively comprehensive survey of Deep Learning methods for different aspects of auotnomous Driving, including but not limited to perception for SDVs, end-to-end autonomous driving, and BEV perception. As one of the largest fields in Robotics and AI research, autonomous driving with DNNs have been explored with various methods, and I try to cover relatively significant, frequently cited, or state-of-the-art works from academia in this post. Please note that this is an on-going list as I will continue to update it, and furthermore is most definitely not an exhaustive list.
 
-# Neural Motion Planning for Autonomous Driving
+*disclaimer: various parts of this survey has been written with the help of ChatGPT, with proof-reading and further edits made by me.*
 
+# Neural Motion Planning for Autonomous Driving
+Learning based methods for modularized perception and motion planning. Neural Motion Planning methods typically conduct prediction and prediction coupled with trajectory sampling and cost volume generation to perform interpretable end-to-end motion planning.
 
 ## [End-to-end Interpretable Neural Motion Planner](https://arxiv.org/pdf/2101.06679.pdf)
 
@@ -35,21 +37,25 @@ The NMP method proposed in this paper achieves state-of-the-art performance on a
 
 ## [Perceive, Predict, and Plan: Safe Motion Planning Through Interpretable Semantic Representations](https://arxiv.org/pdf/2008.05930.pdf)
 
-"Perceive, Predict, and Plan," by Sadat et al., introduces a novel end-to-end learnable network for self-driving vehicles. Its key difference to prior NMP is that its planning costs are consistent with the perception task, as they use the intermediate semantic representation as part of its cost volume generationn process, instead of the perception task being an auxilliary task for the network to train and predict end-to-end. Furthermore, the semantic representation is a dense semantic prediction, which when compared to the predicted detection and forecasting prediction from NMP provides a much richer information of the environment surrounding the autonomous vehicle.
-
-
-
-Unlike NMP, this network performs joint perception, prediction, and motion planning, and produces interpretable intermediate representations. One limitation of the previous work, the NMP, was that it only handled object-level representations. In contrast, the proposed network uses a dense semantic representation as the intermediate representation for autonomous driving. The network achieves this by using a novel differentiable semantic occupancy representation that is explicitly used as cost by the motion planning process. Furthermore, the proposed model is learned end-to-end from human demonstrations. The experiments on a large-scale manual-driving dataset and closed-loop simulation show that the proposed model significantly outperforms state-of-the-art planners in imitating human behaviors while producing much safer trajectories.
-
-The method proposed in "Perceive, Predict, and Plan" is an end-to-end approach to self-driving that produces intermediate representations designed for safe planning and decision-making while maintaining interpretability. The authors make use of a map, the intended route, and raw LiDAR point-cloud to generate an intermediate semantic occupancy representation over space and time. These occupancy layers provide information about potential objects, including those with low probability, enabling perception of objects of arbitrary shape rather than just bounding boxes. This is a significant improvement over existing approaches that rely on object detectors that threshold activations and produce objects with only bounding box shapes, which can be problematic for safety.
+"Perceive, Predict, and Plan," by Sadat et al., introduces a novel end-to-end learnable neural motion planning framework. Its key difference to NMP is that its planning costs are consistent with the perception task, as they utilize the intermediate semantic representation as part of its cost volume generationn process. Instead of the feature map from the convolutional backbone processed by a perception head and cost volume head separately, their Perceive, Predict, and Plan, or P3, framework outputs a *semantic occupancy* representation that efficiently captures a dense semantic understanding of the surrounding environment, while feeding to same representation as cost function for max-margin loss based motion planner. xxx
 
 The semantic activations produced by the proposed model are highly interpretable. The authors generate occupancy layers for each class of vehicles, bicyclists, and pedestrians, as well as occlusion layers that predict occluded objects. Moreover, by using the planned route of the self-driving vehicle, they can semantically differentiate vehicles by their interaction with the intended route, such as oncoming traffic versus crossing, which adds to the interpretability of the perception outputs. This differentiation can also potentially help the planner learn different subcosts for each category, such as different safety buffers for parked vehicles versus oncoming traffic.
 
 The proposed model's sample-based learnable motion planner then takes these occupancy predictions and evaluates the associated risk of different maneuvers to find a safe and comfortable trajectory for the self-driving vehicle. This is done through an interpretable cost function used to cost motion-plan samples, which efficiently exploits the occupancy information. The model is trained end-to-end to imitate human driving while avoiding collisions and traffic infractions, and Fig. 1 provides an overview of the proposed approach. Overall, the authors show that their proposed model significantly outperforms state-of-the-art planners in imitating human behaviors while producing much safer trajectories.
 
+Their experiments on large-scale real driving dataset and closed-loop simluations show that the proposed method significantly outperforms state-of-the-art planners in imitating human behaviors while producing much safer trajectories.
+
+
+merge below paragraphs to the above:
+The network achieves this by using a novel differentiable semantic occupancy representation that is explicitly used as cost by the motion planning process. Furthermore, the proposed model is learned end-to-end from human demonstrations. The experiments on a large-scale manual-driving dataset and closed-loop simulation show that the proposed model 
+
+The method proposed in "Perceive, Predict, and Plan" is an end-to-end approach to self-driving that produces intermediate representations designed for safe planning and decision-making while maintaining interpretability. The authors make use of a map, the intended route, and raw LiDAR point-cloud to generate an intermediate semantic occupancy representation over space and time. These occupancy layers provide information about potential objects, including those with low probability, enabling perception of objects of arbitrary shape rather than just bounding boxes. This is a significant improvement over existing approaches that rely on object detectors that threshold activations and produce objects with only bounding box shapes, which can be problematic for safety.
+
+
+
 ## [MP3: A Unified Model to Map, Perceive, Predict and Plan](https://openaccess.thecvf.com/content/CVPR2021/papers/Casas_MP3_A_Unified_Model_To_Map_Perceive_Predict_and_Plan_CVPR_2021_paper.pdf)
 
-The quest to achieve safe and efficient autonomous driving is an ongoing challenge that requires continuous advancements in perception, prediction, and planning capabilities. In recent years, the research group led by Casas et al. has made significant strides towards this goal, proposing several end-to-end learnable models for self-driving vehicles. One of the key challenges in developing self-driving systems is the construction of high-definition maps (HD maps), which are expensive to create and maintain, and require high-precision localization systems. In their latest paper titled "MP3: A Unified Model to Map, Perceive, Predict and Plan," Casas et al. propose a mapless driving approach that can operate using raw sensor data and a high-level command. Their proposed model predicts intermediate representations in the form of an online map and the current and future state of dynamic agents, which are used by a novel neural motion planner to make interpretable decisions taking into account uncertainty. The MP3 approach is shown to be significantly safer, more comfortable, and better able to follow commands than baselines in challenging long-term closed-loop simulations and when compared to an expert driver in a large-scale real-world dataset.
+The quest to achieve safe and efficient autonomous driving is an ongoing challenge that requires continuous advancements in perception, prediction, and planning capabilities. In recent years, Casas et al. has made significant strides towards this goal, proposing several end-to-end learnable models for self-driving vehicles. One of the key challenges in developing self-driving systems is the construction of high-definition maps (HD maps), which are expensive to create and maintain, and require high-precision localization systems. In their latest paper titled "MP3: A Unified Model to Map, Perceive, Predict and Plan," Casas et al. propose a mapless driving approach that can operate using raw sensor data and a high-level command. Their proposed model predicts intermediate representations in the form of an online map and the current and future state of dynamic agents, which are used by a novel neural motion planner to make interpretable decisions taking into account uncertainty. The MP3 approach is shown to be significantly safer, more comfortable, and better able to follow commands than baselines in challenging long-term closed-loop simulations and when compared to an expert driver in a large-scale real-world dataset.
 
 ## [ST-P3: End-to-end Vision-based Autonomous Driving via Spatial-Temporal Feature Learning](https://arxiv.org/pdf/2207.07601.pdf)
 
@@ -57,12 +63,16 @@ ST-P3 proposes a novel approach for autonomous driving, which integrates camera-
 
 ## [Rules of the Road: Predicting Driving Behavior with a Convolutional Model of Semantic Interactions](https://arxiv.org/pdf/1906.08945.pdf)
 
+The proposed method in the paper "Rules of the Road: Predicting Driving Behavior with a Convolutional Model of Semantic Interactions" comprises three main components: (1) a unique input representation of an entity and its surrounding world context, (2) a neural network that maps past and present world representation to future behaviors, and (3) one of several possible output representations of future behavior that can be integrated into a robot planning system. The model focuses on a single "target entity" and is designed to take all other world context, including other entities, into account, making it an entity-centric model. This approach allows for a deep understanding of the semantics of the static and dynamic environment, including traffic laws, driving conventions, and interactions between human and robot actors, which is crucial for self-driving robots operating in unconstrained urban environments.
+
 ## [Safety-Enhanced Autonomous Driving Using Interpretable Sensor Fusion Transformer](https://arxiv.org/pdf/2207.14024.pdf)
 
 ## [ChauffeurNet: Learning to Drive by Imitating the Best and Synthesizing the Worst](https://arxiv.org/pdf/1812.03079.pdf)
 
 # Vision to Control
 Learning methods to directly map control/plan from visual input(RGB images, LiDAR, etc.)
+
+## [FIERY]()
 
 ## [CIRL]()
 
