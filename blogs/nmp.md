@@ -37,9 +37,15 @@ The NMP method proposed in this paper achieves state-of-the-art performance on a
 
 ## [Perceive, Predict, and Plan: Safe Motion Planning Through Interpretable Semantic Representations](https://arxiv.org/pdf/2008.05930.pdf)
 
+![alt text](/images/P3.png "Perceive, Predict, and Plan.")
+<img src="/images/P3.png" width="100px" height="50px" title="Perceive, Predict, and Plan."/>
+
 "Perceive, Predict, and Plan," by Sadat et al., introduces a novel end-to-end learnable neural motion planning framework. Its key difference to NMP is that its planning costs are consistent with the perception task, as they utilize the intermediate semantic representation as part of its cost volume generationn process. Instead of the feature map from the convolutional backbone processed by a perception head and cost volume head separately, their Perceive, Predict, and Plan, or P3, framework outputs a *semantic occupancy* representation that efficiently captures a dense semantic understanding of the surrounding environment, while feeding to same representation as cost function for max-margin loss based motion planner. xxx
 
 The semantic activations produced by the proposed model are highly interpretable. The authors generate occupancy layers for each class of vehicles, bicyclists, and pedestrians, as well as occlusion layers that predict occluded objects. Moreover, by using the planned route of the self-driving vehicle, they can semantically differentiate vehicles by their interaction with the intended route, such as oncoming traffic versus crossing, which adds to the interpretability of the perception outputs. This differentiation can also potentially help the planner learn different subcosts for each category, such as different safety buffers for parked vehicles versus oncoming traffic.
+
+![alt text](/images/P3_motionplanning.png "Motiong Planner costs in Perceive, Predict, and Plan.")
+<img src="/images/P3_motionplanning.png" width="100px" height="50px" title="Perceive, Predict, and Plan."/>
 
 The proposed model's sample-based learnable motion planner then takes these occupancy predictions and evaluates the associated risk of different maneuvers to find a safe and comfortable trajectory for the self-driving vehicle. This is done through an interpretable cost function used to cost motion-plan samples, which efficiently exploits the occupancy information. The model is trained end-to-end to imitate human driving while avoiding collisions and traffic infractions, and Fig. 1 provides an overview of the proposed approach. Overall, the authors show that their proposed model significantly outperforms state-of-the-art planners in imitating human behaviors while producing much safer trajectories.
 
@@ -55,7 +61,12 @@ The method proposed in "Perceive, Predict, and Plan" is an end-to-end approach t
 
 ## [MP3: A Unified Model to Map, Perceive, Predict and Plan](https://openaccess.thecvf.com/content/CVPR2021/papers/Casas_MP3_A_Unified_Model_To_Map_Perceive_Predict_and_Plan_CVPR_2021_paper.pdf)
 
+![alt text](/images/MP3.png "MP3: A Unified Model to Map, Perceive, Predict and Plan.")
+<img src="/images/MP3.png" width="100px" height="50px" title="MP3: A Unified Model to Map, Perceive, Predict and Plan."/>
+
 The quest to achieve safe and efficient autonomous driving is an ongoing challenge that requires continuous advancements in perception, prediction, and planning capabilities. In recent years, Casas et al. has made significant strides towards this goal, proposing several end-to-end learnable models for self-driving vehicles. One of the key challenges in developing self-driving systems is the construction of high-definition maps (HD maps), which are expensive to create and maintain, and require high-precision localization systems. In their latest paper titled "MP3: A Unified Model to Map, Perceive, Predict and Plan," Casas et al. propose a mapless driving approach that can operate using raw sensor data and a high-level command. Their proposed model predicts intermediate representations in the form of an online map and the current and future state of dynamic agents, which are used by a novel neural motion planner to make interpretable decisions taking into account uncertainty. The MP3 approach is shown to be significantly safer, more comfortable, and better able to follow commands than baselines in challenging long-term closed-loop simulations and when compared to an expert driver in a large-scale real-world dataset.
+
+## [Perceive, Attend, and Drive: Learning Spatial Attention for Safe Self-Driving](https://arxiv.org/pdf/2011.01153.pdf)
 
 ## [ST-P3: End-to-end Vision-based Autonomous Driving via Spatial-Temporal Feature Learning](https://arxiv.org/pdf/2207.07601.pdf)
 
@@ -67,18 +78,27 @@ The proposed method in the paper "Rules of the Road: Predicting Driving Behavior
 
 ## [Safety-Enhanced Autonomous Driving Using Interpretable Sensor Fusion Transformer](https://arxiv.org/pdf/2207.14024.pdf)
 
+The paper titled "Safety-Enhanced Autonomous Driving Using Interpretable Sensor Fusion Transformer" addresses the challenges of developing safe and reliable autonomous vehicles, particularly in high-traffic-density scenes where a large number of obstacles and dynamic objects are involved in the decision making. The paper proposes a novel approach called Interpretable Sensor Fusion Transformer (InterFuser), which fuses information from multi-modal multi-view sensors and provides intermediate interpretable features as safety constraint heuristics to enhance driving safety. The authors experimentally validated the proposed method on several CARLA benchmarks with complex and adversarial urban scenarios, and their model outperformed all prior methods, ranking first on the public CARLA Leaderboard.
+
+The safety enhanced controller of the autonomous vehicle is designed to ensure safe driving by utilizing a combination of interpretable features and waypoints generated by the transformer decoder. The low-level actions of the vehicle, namely lateral steering and longitudinal acceleration, are determined by a PID controller that aligns the vehicle to the desired heading and aims to reach the desired speed while taking into account the surrounding objects. The object density map is utilized to determine the existence of an object in a grid by either its existence probability in the grid or by identifying the local maximum in surrounding grids, and then predicting its future trajectory by propagating its historical dynamics with moving average. The maximum safe distance the vehicle can travel is then determined, and a linear programming problem is solved to derive the desired velocity with enhanced safety. Additionally, the predicted traffic rule is also used for safe driving, and the vehicle performs an emergency stop if the traffic light is not green or there is a stop sign ahead. While more advanced trajectory prediction methods and safety controllers can be used, the current controller is deemed sufficient for the task at hand, and future integration of these advanced algorithms is possible for more complex driving tasks.
+
 ## [ChauffeurNet: Learning to Drive by Imitating the Best and Synthesizing the Worst](https://arxiv.org/pdf/1812.03079.pdf)
+
+## [Imitation Is Not Enough: Robustifying Imitation with Reinforcement Learning for Challenging Driving Scenarios](https://arxiv.org/pdf/2212.11419.pdf)
 
 # Vision to Control
 Learning methods to directly map control/plan from visual input(RGB images, LiDAR, etc.)
 
-## [FIERY]()
+## [Model-Based Imitation Learning for Urban Driving (MILE)](https://arxiv.org/pdf/2210.07729.pdf)
 
-## [CIRL]()
+![alt text](/images/MILE.png "Model-Baased Imitation Learning for Urban Driving.")
+<img src="/images/MILE.png" width="80" height="40px" title="Model-Baased Imitation Learning for Urban Driving."/>
 
-## [VISTA]()
+## [FIERY](https://arxiv.org/pdf/2104.10490.pdf)
 
-## [VISTA 2.0]()
+## [End-to-end Driving via Conditional Imitation Learning](https://vladlen.info/papers/conditional-imitation.pdf)
+
+## [VISTA 2.0: An Open, Data-driven Simulator for Multimodal Sensing and Policy Learning for Autonomous Vehicles](https://arxiv.org/abs/2111.12083)
 
 # Self-supervision driven representation for driving
 
@@ -101,6 +121,8 @@ It needs to be noted that to reduce input complexity and improve generalization,
 ## TrajFormer
 
 ## TransFusion
+
+## TnT
 
 # BEV Perception
 I recommend [Delving into the Devils of Bird's-eye-view Perception: A Review, Evaluation and Recipe](https://arxiv.org/pdf/2209.05324.pdf).   
