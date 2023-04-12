@@ -97,6 +97,15 @@ Learning methods to directly map control/plan from visual input(RGB images, LiDA
 
 ## [Model-Based Imitation Learning for Urban Driving (MILE)](https://arxiv.org/pdf/2210.07729.pdf)
 
+I believe MILE's approach is best explained by the people from Wayve that created the system, as I quote([link](https://wayve.ai/thinking/learning-a-world-model-and-a-driving-policy/)): "MILE’s main components are:
+
+Observation encoder. Since autonomous driving is a geometric problem where it is necessary to reason in 3D about the static environment and dynamic agents, we first lift the image features to 3D. The 3D feature voxels are then sum-pooled to Bird’s-Eye View (BEV) using a predefined grid. Even after sum-pooling the voxel features to BEV, the high dimensionality of the BEV features is prohibitive for a probabilistic world model. Therefore, using a convolutional backbone, we further compress the BEV features to a one-dimensional vector.
+Probabilistic modelling. The world model is trained to match the distribution of the prior distribution (a guess of what will happen after the executed action) to the posterior distribution (the evidence of what actually happened).
+Decoders. The observation decoder and the BEV decoder have an architecture similar to StyleGAN [Karras et al. 2019]. The prediction starts as a learned constant tensor, and is progressively upsampled to the final resolution. At each resolution, the latent state is injected into the network with adaptive instance normalisation. This allows the latent states to modulate the predictions at different resolutions. Additionally, the driving policy outputs the vehicle control.
+Temporal modelling. Time is modelled by a recurrent network that models the latent dynamics, predicting the next latent state from the previous latent state.
+Imagination. From this observed past context, the model can imagine future latent states and use them to plan and predict actions using the driving policy. Future states can also be visualised and interpreted through the decoders.
+From past observations, our model can imagine plausible diverse futures and plan different actions based on the predicted future. We demonstrate this with an example of MILE approaching an intersection. The traffic light is green, and we are following a vehicle."
+
 ![alt text](/images/MILE.png "Model-Baased Imitation Learning for Urban Driving.")
 <img src="/images/MILE.png" width="80" height="40px" title="Model-Baased Imitation Learning for Urban Driving."/>
 
@@ -112,7 +121,7 @@ It needs to be noted that to reduce input complexity and improve generalization,
 
 ## CIL
 
-## CIL++
+## CIRL
 
 # Perception & Prediction
 
@@ -129,6 +138,8 @@ It needs to be noted that to reduce input complexity and improve generalization,
 ## TransFusion
 
 ## TnT
+
+## WayFormer
 
 # BEV Perception
 I recommend [Delving into the Devils of Bird's-eye-view Perception: A Review, Evaluation and Recipe](https://arxiv.org/pdf/2209.05324.pdf).   
