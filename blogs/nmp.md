@@ -122,7 +122,7 @@ It needs to be noted that to reduce input complexity and improve generalization,
 ## CIL
 
 ## CIRL
-
+<!-- 
 # Perception & Prediction
 
 ## PnPNet
@@ -133,16 +133,27 @@ It needs to be noted that to reduce input complexity and improve generalization,
 
 ## Detectron++
 
-## TrajFormer
-
 ## TransFusion
 
 ## TnT
 
-## WayFormer
+## TrajFormer
+
+## WayFormer -->
 
 # BEV Perception
 I recommend [Delving into the Devils of Bird's-eye-view Perception: A Review, Evaluation and Recipe](https://arxiv.org/pdf/2209.05324.pdf).   
+
+# Strucutured, Engineering Approaches
+
+I highlight miscellaneous interesting work here
+
+## [NVIDIA Safety Force Field](https://www.nvidia.com/content/dam/en-zz/Solutions/self-driving-cars/safety-force-field/an-introduction-to-the-safety-force-field-v2.pdf)
+
+***"The Safety Force Field is built on a simple core concept:
+Actors in traffic should apply a safety procedure or equivalent action before it is too late"***
+
+
 
 # Miscellaneous Links
 1. https://www.youtube.com/watch?v=PyOQibtWHI0
