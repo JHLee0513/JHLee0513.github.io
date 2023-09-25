@@ -4,11 +4,14 @@ layout: post
 
 # Blogs
 
-Here I share my survey on papers for various topics, and also present any work/publications I have done.
-
 <a href="/blogs/DA">Unsupervised Domain Adaptation for LiDAR Semantic Segmentation</a>
 
-<a href="/blogs/blogs">Offroad autonomy</a>
+<a href="/blogs/sem_nf">Semantics and NeRF: Towards 3D Semantic Scene Understanding from images</a>
+
+<!-- <a href="/blogs/blogs">Offroad autonomy</a> -->
+
+<a href="/blogs/random">Random notes</a>
+
 
 <!-- Analysis and thoughts on papers relevant to my research interests. -->
 
