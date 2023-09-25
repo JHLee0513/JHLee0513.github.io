@@ -4,7 +4,21 @@
 
 ## Publications 
 
+### LiDAR-UDA: Self-ensembling Through Time for Unsupervised LiDAR Domain Adaptation
+**ICCV 2023 (Oral)**
+<br>
+<i>Amirreza Shaban*, <b>JoonHo Lee*</b>, Sanghun Jung*, Xiangyun Meng, Byron Boots</i>
+<br>
+**Equal Contribution*
+<br>
+[[Paper]](https://github.com/JHLee0513/LiDARUDA/blob/main/paper.pdf) [[Website]](https://sites.google.com/view/lidaruda)
+<img src="images/lidaruda_main_figure-embedded.jpg?raw=true"/>
+
+We introduce LiDAR-UDA, a novel two-stage self-training-based Unsupervised Domain Adaptation (UDA) method for LiDAR segmentation. Existing self-training methods use a model trained on labeled source data to generate pseudo labels for target data and refine the predictions via fine-tuning the network on the pseudo labels. These methods suffer from domain shifts caused by different LiDAR sensor configurations in the source and target domains. We propose two techniques to reduce sensor discrepancy and improve pseudo label quality: 1) LiDAR beam subsampling, which simulates different LiDAR scanning patterns by randomly dropping beams; 2) cross-frame ensembling, which exploits temporal consistency of consecutive frames to generate more reliable pseudo labels. Our method is simple, generalizable, and does not incur any extra inference cost. We evaluate our method on several public LiDAR datasets and show that it outperforms the state-of-the-art methods by more than 3.9% mIoU on average for all scenarios. Code will be available at [https://github.com/JHLee0513/LiDARUDA](https://github.com/JHLee0513/LiDARUDA).
+
 ### TerrainNet: Visual Modeling of Complex Terrain for High-speed, Off-road Navigation
+**Robotics: Science and Systems XIX**
+<br>
 [[Paper]](https://arxiv.org/abs/2303.15771) [[Website]](https://sites.google.com/view/visual-terrain-modeling)
 <br>
 *Xiangyun Meng, Nathan Hatch, Alexander Lambert, Anqi Li, Nolan Wagener, Matthew Schmittle, <b>JoonHo Lee</b>, Wentao Yuan, Zoey Chen, Samuel Deng, Greg Okopal, Dieter Fox, Byron Boots, Amirreza Shaban*
@@ -20,17 +34,19 @@ Effective use of camera-based vision systems is essential for robust performance
 </p>
 
 ### Semantic Terrain Classification for Off-Road Autonomous Driving
+
+<b>5th Conference on Robot Learning (CoRL) 2021</b>
+<br>
 [[Paper]](https://openreview.net/forum?id=AL4FPs84YdQ) [[Website]](https://sites.google.com/view/terrain-traversability/home)
 <br>
-*Amirreza Shaban, Xiangyun Meng, <b>JoonHo Lee</b>, Byron Boots, Dieter Fox*
-<b>
+<i>Amirreza Shaban*, Xiangyun Meng*, <b>JoonHo Lee*</b>, Byron Boots, Dieter Fox</i>
 <br>
-5th Conference on Robot Learning (CoRL) 2021
-</b>
+**Equal Contribution*
+
 <img src="images/warthog.png?raw=true"/>
 <img src="images/canal.gif?raw=true"/>
 <p>
-Abstract: Producing dense and accurate traversability maps is crucial for autonomous off-road navigation. In this paper, we focus on the problem of classifying terrains into 4 cost classes (free, low-cost, medium-cost, obstacle) for traversability assessment. This requires a robot to reason about both semantics (what objects are present?) and geometric properties (where are the objects located?) of the environment. To achieve this goal, we develop a novel Bird's Eye View Network (BEVNet), a deep neural network that directly predicts a local map encoding terrain classes from sparse LiDAR inputs. BEVNet processes both geometric and semantic information in a temporally consistent fashion. More importantly, it uses learned prior and history to predict terrain classes in unseen space and into the future, allowing a robot to better appraise its situation. We quantitatively evaluate BEVNet on both on-road and off-road scenarios and show that it outperforms a variety of strong baselines.
+Producing dense and accurate traversability maps is crucial for autonomous off-road navigation. In this paper, we focus on the problem of classifying terrains into 4 cost classes (free, low-cost, medium-cost, obstacle) for traversability assessment. This requires a robot to reason about both semantics (what objects are present?) and geometric properties (where are the objects located?) of the environment. To achieve this goal, we develop a novel Bird's Eye View Network (BEVNet), a deep neural network that directly predicts a local map encoding terrain classes from sparse LiDAR inputs. BEVNet processes both geometric and semantic information in a temporally consistent fashion. More importantly, it uses learned prior and history to predict terrain classes in unseen space and into the future, allowing a robot to better appraise its situation. We quantitatively evaluate BEVNet on both on-road and off-road scenarios and show that it outperforms a variety of strong baselines.
 </p>
 
 ## Research Projects
@@ -58,7 +74,7 @@ Demo Videos: [Weeds](https://youtu.be/Ze9WJevj-Hw) [Snow](https://youtu.be/w5pjY
 <br>
 
 <p>
-Abstract: The task of autonomous offroad driving yields great potential for various beneficial applications, including but not limited to remote disaster relief, environment survey, and agricultural robotics. While achieving the task of robust offroad driving poses relatively new, interesting challenges to tackle, the most important requirement for a successful offroad autonomy is observed to be an effective understanding of the vehicle surrounding for robust navigation and driving. Therefore, in this thesis we tackle the task of scene understanding for autonomous offroad driving. We formulate the task of scene understanding as a traversability classification task, and develop a multimodal perception framework that extracts semantic knowledge. As our key contribution we propose a multimodal perception framework that uses convolutional neural networks with image and LiDAR input. The pipeline generates semantic knowledge from input data for robust mapping, planning, and control in the wild environment. We evaluate our method by integrating it into an autonomy stack and demonstrating its performance in a set of environments under various weather conditions.
+The task of autonomous offroad driving yields great potential for various beneficial applications, including but not limited to remote disaster relief, environment survey, and agricultural robotics. While achieving the task of robust offroad driving poses relatively new, interesting challenges to tackle, the most important requirement for a successful offroad autonomy is observed to be an effective understanding of the vehicle surrounding for robust navigation and driving. Therefore, in this thesis we tackle the task of scene understanding for autonomous offroad driving. We formulate the task of scene understanding as a traversability classification task, and develop a multimodal perception framework that extracts semantic knowledge. As our key contribution we propose a multimodal perception framework that uses convolutional neural networks with image and LiDAR input. The pipeline generates semantic knowledge from input data for robust mapping, planning, and control in the wild environment. We evaluate our method by integrating it into an autonomy stack and demonstrating its performance in a set of environments under various weather conditions.
 </p>
 
 ### Into the Wild: Robust Offroad Driving with Deep Perception
@@ -68,7 +84,7 @@ Abstract: The task of autonomous offroad driving yields great potential for vari
 <br>
 [PDF](/pdf/clipcap++_report.pdf)
 <p>
-Abstract: Modern research in Image Captioning typically utilizes transformers to achieve high accuracy. However, these methods at a large scale require both substantial amounts of data and compute, which makes training often challenging. To address this issue, we propose to train a mapping network between a pretrained image encoder and text decoder for efficiency. Our approach, based on ClipCap, explores improved utilization of the pretrained models, yielding improved performance on the COCO Captions dataset while training only the mapping network. This report has been developed as part of a Capstone class (CSE481N, University of Washington), and our code is available on [https://github.com/quocthai9120/UW-NLP-Capstone-SP22](https://github.com/quocthai9120/UW-NLP-Capstone-SP22).
+Modern research in Image Captioning typically utilizes transformers to achieve high accuracy. However, these methods at a large scale require both substantial amounts of data and compute, which makes training often challenging. To address this issue, we propose to train a mapping network between a pretrained image encoder and text decoder for efficiency. Our approach, based on ClipCap, explores improved utilization of the pretrained models, yielding improved performance on the COCO Captions dataset while training only the mapping network. This report has been developed as part of a Capstone class (CSE481N, University of Washington), and our code is available on [https://github.com/quocthai9120/UW-NLP-Capstone-SP22](https://github.com/quocthai9120/UW-NLP-Capstone-SP22).
 </p>
 
 ---
