@@ -5,13 +5,15 @@
 ## Publications 
 
 ### LiDAR-UDA: Self-ensembling Through Time for Unsupervised LiDAR Domain Adaptation
-**ICCV 2023 (Oral)**
+**International Conference on Computer Vision 2023 (Oral)**
 <br>
-<i>Amirreza Shaban*, <b>JoonHo Lee*</b>, Sanghun Jung*, Xiangyun Meng, Byron Boots</i>
+<i>Amirreza Shaban\*, <b>JoonHo Lee\*</b>, Sanghun Jung\*, Xiangyun Meng, Byron Boots</i>
 <br>
 **Equal Contribution*
 <br>
 [[Paper]](https://github.com/JHLee0513/LiDARUDA/blob/main/paper.pdf) [[Website]](https://sites.google.com/view/lidaruda)
+<br>
+<br>
 <img src="images/lidaruda_main_figure-embedded.jpg?raw=true"/>
 
 We introduce LiDAR-UDA, a novel two-stage self-training-based Unsupervised Domain Adaptation (UDA) method for LiDAR segmentation. Existing self-training methods use a model trained on labeled source data to generate pseudo labels for target data and refine the predictions via fine-tuning the network on the pseudo labels. These methods suffer from domain shifts caused by different LiDAR sensor configurations in the source and target domains. We propose two techniques to reduce sensor discrepancy and improve pseudo label quality: 1) LiDAR beam subsampling, which simulates different LiDAR scanning patterns by randomly dropping beams; 2) cross-frame ensembling, which exploits temporal consistency of consecutive frames to generate more reliable pseudo labels. Our method is simple, generalizable, and does not incur any extra inference cost. We evaluate our method on several public LiDAR datasets and show that it outperforms the state-of-the-art methods by more than 3.9% mIoU on average for all scenarios. Code will be available at [https://github.com/JHLee0513/LiDARUDA](https://github.com/JHLee0513/LiDARUDA).
@@ -39,9 +41,9 @@ Effective use of camera-based vision systems is essential for robust performance
 <br>
 [[Paper]](https://openreview.net/forum?id=AL4FPs84YdQ) [[Website]](https://sites.google.com/view/terrain-traversability/home)
 <br>
-<i>Amirreza Shaban*, Xiangyun Meng*, <b>JoonHo Lee*</b>, Byron Boots, Dieter Fox</i>
+<i>Amirreza Shaban\*, Xiangyun Meng\*, <b>JoonHo Lee\*</b>, Byron Boots, Dieter Fox</i>
 <br>
-**Equal Contribution*
+<i>\*Equal Contribution</i>
 
 <img src="images/warthog.png?raw=true"/>
 <img src="images/canal.gif?raw=true"/>
@@ -132,5 +134,5 @@ Position: [81st/2943]
 
 
 ---
-<p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
+<!-- <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p> -->
 <!-- Remove above link if you don't want to attibute -->
