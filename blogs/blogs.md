@@ -4,76 +4,25 @@ layout: post
 
 # Blogs
 
+*Note: Unless specified in publications, the papers covered by these blogs are not my own work*
+
 <a href="/blogs/DA">Unsupervised Domain Adaptation for LiDAR Semantic Segmentation</a>
 
 <a href="/blogs/sem_nf">Semantics and NeRF: Towards 3D Semantic Scene Understanding from images</a>
 
-<!-- <a href="/blogs/blogs">Offroad autonomy</a> -->
+<a href="/blogs/CLIP">Vision Langauge Models</a>
+
+<!-- <a href="/blogs/mask2former">Mask2Former</a> -->
+
+<a href="/blogs/mm_reasoning">MultiModal Generalist Modeling (and embodiment)</a>
+
+<!-- <a href="/blogs/offroad">Offroad autonomy</a> -->
+
+<a href="/blogs/autosim">Simulators for Autonomous Driving</a>
+
+<a href="/blogs/pre_robot">Pre-training for Robotics</a>
+
+<a href="/blogs/vit">Transformer (attention) architectures in Computer Vision</a>
 
 <a href="/blogs/random">Random notes</a>
 
-
-<!-- Analysis and thoughts on papers relevant to my research interests. -->
-
-<!-- <a href="/blogs/blogs">LiDAR perception based representation learning</a>
-<a href="/blogs/blogs">Multimodal Fusion for Autonomous Driving Perception</a>
-<a href="/blogs/blogs">Offroad traversability and Vision based control</a>
-<a href="/blogs/blogs">BEV based perception for Urban Autonomous Driving</a> -->
-<!-- ## Autonomous Driving -->
-
-<!-- 1. <a href="/blogs/blogs">Model-Based Imitation Learning for Urban Driving</a> -->
-
-<!-- 1. <a href="/blogs/bev">BEV Perception</a> -->
-
-<!-- 1. Waabi: Survey on Waabi's approach to Self-Driving
-2. Tesla: Perception-based FSD
-3. Wayve:
-4. Aurora:
-5. NVIDIA:
-6. Argoverse:
-7. Argo(CMU): -->
-
-<!-- ## Offroad Autonomy -->
-<!-- 1. Traversability Estimation
-2.  -->
-
-<!-- ## Integrating Learning and Control -->
-
-<!-- ## Self Supervision -->
-
-<!-- ## Imitation Learning -->
-<!-- 1. Maximum Margin Planning
-2. Max Ent IRL
-3. Imitation Learning -->
-
-<!-- ## Multi-task Vision for Autonomous Driving -->
-
----
-<!-- <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p> -->
-<!-- Remove above link if you don't want to attibute -->
-
-
-<!-- 1. <a href="/blogs/bev">BEV Perception</a> -->
-
-<!-- 1. Waabi: Survey on Waabi's approach to Self-Driving
-2. Tesla: Perception-based FSD
-3. Wayve:
-4. Aurora:
-5. NVIDIA:
-6. Argoverse:
-7. Argo(CMU): -->
-
-<!-- ## Offroad Autonomy -->
-<!-- 1. Traversability Estimation
-2.  -->
-
-<!-- ## Integrating Learning and Control -->
-
-<!-- ## Self Supervision -->
-
-<!-- ## Imitation Learning -->
-<!-- 1. Maximum Margin Planning
-2. Max Ent IRL
-3. Imitation Learning -->
-
-<!-- ## Multi-task Vision for Autonomous Driving -->
