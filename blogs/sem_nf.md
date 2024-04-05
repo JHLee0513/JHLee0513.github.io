@@ -1,4 +1,4 @@
-# Semantics and NeRF: Towards 3D Semantic Scene Understanding from images
+# Semantics and NeRF: Towards 3D Semantic Scene Understanding from images (and Gaussian Splats below..)
 
 This blog covers the line of work in integrating semantic knowledge into NeRF (Neural Rendering Field) for 3D Semantic Scene Understanding. 
 
@@ -26,7 +26,7 @@ Naturally, when considering NeRF and semantics, one may consider the following q
 And the answer is yes! Zhi et. al. was able to achieve this by extending the NeRF architecture to output semantic distribution $s$ in addition to the original RGB and emission density:
 
 <!-- ![semantic nerf]("images/semantic_nerf.png") -->
-<img src="images/semantic_nerf.png?raw=true"/>
+<img src="../images/semantic_nerf.png?raw=true"/>
 
 
 *Semantic NeRF architecture[1]*
@@ -39,13 +39,13 @@ Besides 3D semantic scene understanding, Semantic NeRF provides additional featu
 
 Exploring further from the idea initially explored by Semantic NeRF, Vora et. al. explore generalizable 3D semantic scene understanding by decoupling learning 3D geometry (orignial NeRF objective) and semantics (using semantic labels).
 
-<img src="images/NeSF.png?raw=true"/>
+<img src="../images/NeSF.png?raw=true"/>
 
 *NeSF[2]*
 
 The key idea is to split the *geometric reconsturction* via NeRF and *semantic labeling* via 3D UNet. Upon training NeRF from set of images, the learned density field is then passed to the 3D UNet for segmentation. It's important to note here that then NeSF can be applied to unlabeled scenes, where only the RGB images are needed for NeRF, whereas the 3D UNet trained from other datasets can be used for semantic labeling. This allows generalization to novel scenes where the semantics are provided by pre-trained segmentation network, while 3D reconstruction is conducted by NeRF in self-supervised manner (since NeRF only needs the set of RGB images of the scene for implicit 3D view synthesis and density grid modelling).
 
-<img src="images/NeSF_training.png?raw=true"/>
+<img src="../images/NeSF_training.png?raw=true"/>
 
 *NeSF Training[2]*
 
@@ -56,7 +56,7 @@ The Semantic 3D UNet is also trained via differential rendering and does not req
 
 Panoptic Neural Fields developed by Kundu et. al. generalize beyond prior work by developing neural fields for dynamic outdoors scenes with panoptic capabilities, therefore able to detect not only the semantics but individual instances of the scene. Their key improvement is that they can *capture dynamic scenes* as well as *semantic instances*.
 
-<img src="images/panoptic_nerf.png?raw=true"/>
+<img src="../images/panoptic_nerf.png?raw=true"/>
 
 *PanopticNeRF[3]*
 
@@ -65,6 +65,16 @@ The key architectural design of their method is to train separate MLPs for stuff
 The learned representation at test time can then be used for various tasks - depth, instance segmentation, semantic segmentation, and RGB by generating rendering from the trained MLPs.
 
 While their limitations may be that they do require a lot of prior information either provided or predicted i.e. camera poses, object tracks, semantic segmentations, they show remarkable results on outdoor scenes that is usually challenging for NeRF.
+
+## [Nerflets: Local Radiance Fields for Efficient Structure-Aware 3D Scene Representation from 2D Supervision](https://jetd1.github.io/nerflets-web/)
+[[Project page]](https://jetd1.github.io/nerflets-web/) [[Paper]](https://openaccess.thecvf.com/content/CVPR2023/papers/Zhang_Nerflets_Local_Radiance_Fields_for_Efficient_Structure-Aware_3D_Scene_Representation_CVPR_2023_paper.pdf)
+
+
+# Gaussian Splats
+
+## 3D Gaussian Splat
+
+## 4D Gaussian Splat
 
 ### References
 [1] Zhi, Shuaifeng, et al. "In-place scene labelling and understanding with implicit scene representation." Proceedings of the IEEE/CVF International Conference on Computer Vision. 2021.
