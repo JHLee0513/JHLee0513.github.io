@@ -1,0 +1,14 @@
+---
+layout: post
+---
+
+# [VectorMapNet]()
+
+
+* the map detector head, somewhat confusing in their description
+
+
+<!-- * Authors proposed a universal transformer based (meta) architecture for Universal Segmentation i.e. Semantic, Instance, and Panoptic
+* It's to be noted that this does not mean a foundation model (though they argue panoptic model can be used for semantic and instance segmentation), the paper focuses on providing a universal architecture and training framework that does not require modification specific to any of the segmentation tasks.
+* 
+ -->

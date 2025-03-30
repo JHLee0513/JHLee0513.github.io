@@ -1,9 +1,9 @@
 title: JoonHo (Brian) Lee # your name (or website title) here
 logo: "/images/me_2.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  I completed by Masters in the Paul G. Allen School of Computer Science & Engineering at the University of Washington. I'm advised by Professor Byron Boots in the <a target='_blank' href='https://robotlearning.cs.washington.edu/'>UW Robot Learning Lab</a> since Spring 2021. My research focuses on Robotic Vision and Deep Learning. I also received my BS degree at the University of Washington. My current research interest lie in end-to-end learning for autonomous driving, imitation learning, and generalizable perception (open set recognition, domain adaptation).
+  I completed my Masters in the Paul G. Allen School of Computer Science & Engineering at the University of Washington advised by Professor Byron Boots in the <a target='_blank' href='https://robotlearning.cs.washington.edu/'>UW Robot Learning Lab</a>. My current research interest lie in multimodal 3D perception, learning from demonstrations, and traversability estimation for autonomous naivgation.
   <br><br>
-  Email: joonl4(at)cs(dot)washington(dot)edu
+  Email: joonhohere2(at)gmail(dot)com
   <br>
   <a href="/pdf/CV_JoonHoLee.pdf">CV</a>
   <br>
