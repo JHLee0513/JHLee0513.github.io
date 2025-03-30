@@ -145,3 +145,91 @@ VLPart further expands capabilities of open vocabulary semantic segmentation by 
 * For new objects nearest objects from source dataset are mapped to borrow their taxonomy
 * Object part segmentation with DINO applied to then segment and map object part labels to the regions
 * Newly parsed objects then added to the dataset for training of final segmentation model VLPart.
+
+# (SimpleSeg) A Simple Baseline for Open-Vocabulary Semantic Segmentation with Pre-trained Vision-langauge Model
+
+[[ArXiv]](https://arxiv.org/abs/2112.14757)
+
+<p align="center">
+<img src="../images/simpleseg.png" alt="SimpleSeg Method" width="100%"/>
+</p>
+
+* As one of the first papers proposing a two-stage framework for Open-Vocabulary Semantic Segmentation, authors propose using a class-agnostic mask proposal method e.g. MaskFormer and a pretrained Vision Language model e.g. CLIP to individually classify each region and handle unseen classes.
+* The framework is built on the intuition that CLIP's recognition ability is better suited for individually recognizing each region in given input scene, rather than extending its capabilty to classify pixel-wise via finetuning.
+* Besides the main framework, the authors propose a set of additions to boost the performance of the framework, including improvements within the framework but also outside of it as:
+    1. Using more robust mask proposal methods such as MaskFormer rather than GBP-UCM, a classical method
+    2. In seen/unseen dataset setting, where some data/labels are provided for some of the categories, to finetune image encoder for further performance gain. Instead of directly finetuning CLIP, authors achieve finetuning by integrating it into Mask2Former training, where CLIP generated text features are used as the classifier weights for MaskFormer. This way, the ensemble between CLIP output embedding and MaskFormer's output improves performance of seen classes while preventing it from causing CLIP to overfit.
+    3. Prompt Learning: The authors train learnable prompts for input fed to CLIP's text encoder, where the text is [learnable prompt tokens][CLS] for CLS being the categories of interest. This also showed slight improvement in class recognition.
+* As the title suggests, this work proposes a simple yet effective baseline to utilize powerful pre-trained models such as CLIP and MaskFormer for Open-Vocabulary Semantic Segmentation.
+* The proposed approach showed strong performance when trained on one dataset (e.g., COCO Stuff) and tested on different datasets (e.g., Pascal VOC, ADE20k), without any fine-tuning, as well as on zero-shot settings.
+* It's interesting to note that authors found any retraining of pretrained models such as CLIP easily overfits in cross-dataset setting. Meanwhile, they found powerful pretrained models such as CLIP to be cruicial ingredient to their method.
+
+# (OVSeg) Open-Vocabulary Semantic Segmentation with Mask-adapted CLIP
+
+[[Github]](https://github.com/facebookresearch/ov-seg) [[ArXiv]](https://arxiv.org/pdf/2210.04150)
+
+<p align="center">
+<img src="../images/ovseg.png" alt="OVSeg analysis" width="100%"/>
+</p>
+
+<p align="center">
+<img src="../images/ovseg_method.png" alt="OVSeg method" width="100%"/>
+</p>
+
+1. Common method for open vocab seg is to propose masks then provide embedding for classification via models such as CLIP, but it is shown that CLIP does not perform well on masked images, thus leading to quick performance degredation and misalignment.
+
+2. MaskFormer trained (like Openseg) to output mask ROI and per-mask CLIP emebeding. However, their method differs by also modifying the data extraction pipeline where a modified CLIP is used to extract embedding for the masked regions.
+
+3. Training data is collected from pretrained CLIP & maskformer by finding regions of interest, parsing nouns from caption to get several object labels, then matching them to the most likely mask as pseuo label generation.
+
+4. To alleviate CLIP's domain shift issue arising from feeding in masked images, authors first train a learnable zero token that can replace the zero tokens caused by empty patches in the masked image. This is used to greatly improve CLIP's performance and this prompting is applied when training the final OVSeg model.
+
+minor detail: authors used average of the following prompts:
+’a photo of a {}.’,
+’This is a photo of a {}’,
+’There is a {} in the scene’,
+’There is the {} in the scene’,
+’a photo of a {} in the scene’,
+’a photo of a small {}.’,
+’a photo of a medium {}.’,
+’a photo of a large {}.’,
+’This is a photo of a small {}.’,
+’This is a photo of a medium {}.’,
+’This is a photo of a large {}.’,
+’There is a small {} in the scene.’,
+’There is a medium {} in the scene.’,
+’There is a large {} in the scene.’,
+
+
+
+# Side Adapter Network for Open-Vocabulary Semantic Segmentation
+[[Arxiv]](https://arxiv.org/abs/2302.12242)
+
+<p align="center">
+<img src="../images/SAN.png" alt="SAN architecture" width="100%"/>
+</p>
+
+
+# Alpha-CLIP: A CLIP Model Focusing on Wherever You Want
+[[ArXiv]](https://arxiv.org/abs/2312.03818)
+
+<p align="center">
+<img src="../images/alpha-clip.png" alt="Alpha-CLIP" width="100%"/>
+</p>
+
+Alpha-CLIP is a finetuned enhancement of the base CLIP model. While CLIP processes the entire image and fails to attend to specific regions, Alpha-CLIP learns to use alpha-mask as an additional input channel to help focus on specific regions. Additionally, since Alpha-CLIP still can see the whole image, it preserves more contextual information than prior work that masks/crops the image to only process the ROI.
+
+Key Contributions:
+
+* Alpha-CLIP integrates region-awareness by introducing an alpha channel in the CLIP model, enabling more precise control over image understanding and generation tasks.
+* The model is trained on millions of RGBA region-text pairs, created using the Segment Anything Model (SAM) and multimodal models, enhancing its ability to focus on specific image regions. In particular, authors used boxes from the GRIT grounding data to prompt SAM to generate more accurate masks for each grounded object. Additionally, authors applied SAM to ImageNet data to get the object-specific alpha mask and BLIP-2 to generate diverse captions instead of the original class label.
+* Alpha-CLIP has shown performance improvement across zero-shot image classification, multimodal large language models (MLLM), open vocabulary detection, 2D and 3D generation tasks, offering more control and better region comprehension than the original CLIP.
+
+Minor details in Experiment results:
+* Models show improvement with minimum 10K samples, and continue to improve until diminishing returns by 10M
+* Model full-finetuning shows best results compared to freezing any attention layer of LoRA
+
+Future direction & Limitations:
+* Alpha-CLIP can only attend to one region at a time, and therefore the model itself cannot directly consider multiple objects and their relationship.
+* The alpha values currently is also binary - the amplitude of attention cannot be specified as there's no good way to also train/utilize intermediate values.
+* Alpha-CLIP, as it's trained from base CLIP, is also limited by the low resolution problem. A higher resolution is ideal to prevent information loss.

@@ -29,6 +29,8 @@ Disadvantages:
 * Sim2real domain gap (perfect vision, behavioral domain gap)
 * Evaluation with traffic agents are somehwat elementary, the simulator only supports log playback or basic reactive agents.
 
+### Running nuPlan
+
 ## Waymax
 [[Paper]](https://arxiv.org/pdf/2310.08710.pdf) [[Github]](https://github.com/waymo-research/waymax)
 
@@ -54,6 +56,11 @@ Advantages:
 
 Disadvantages:
 * Framework & data are both relatively new, and thus not many prior work on this exact benchmark testing exists
+
+### Running Waymax
+I followed instructions from the Waymax Github repository: <br>
+https://github.com/waymo-research/waymax
+
 
 
 <!-- ## Other data-driven methods

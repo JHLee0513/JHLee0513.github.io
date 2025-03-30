@@ -4,7 +4,7 @@ layout: post
 
 # Blogs
 
-*Note: Unless specified in publications, the papers covered by these blogs are not my own work*
+*Note: Unless specified under publications, the papers covered by these blogs are not my own work*
 
 <a href="/blogs/DA">Unsupervised Domain Adaptation for LiDAR Semantic Segmentation</a>
 
@@ -26,3 +26,8 @@ layout: post
 
 <a href="/blogs/random">Random notes</a>
 
+
+## Random Daily Notes
+For something less comprehensive than blogs, written faster with less quality.
+
+<a href="/blogs/daily/agents">From LLMs to Data Agents</a>

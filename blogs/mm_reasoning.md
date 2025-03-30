@@ -87,8 +87,11 @@ As part of preliminaries, or more of an introduction, I first summarize FiLM and
 
 * A clear showcase of scale achieving even greater results
 * Model as large as 540B parameters trained to achieve even stronger positive transfer across tasks (PaLM-E actively performs better than all specialized models while that wasn't always the case for Gato)
+* Training the full model shows better performance than training only a subset of the model.
 * Positive transfer is observed, where for each task the multi-task learning provides better performance per-task than training on the single task alone.
 * Spiritual successor to Gato, and hence learned tasks relating to very general set of tasks such as playing gamess and VQA.
+* Strong zero shot transfer capabilities, where the model is able to perform tasks without any further training.
+
 
 ## [VC-1: Where are we in the search for an Artificial Visual Cortex for Embodied Intelligence?](https://eai-vc.github.io/)
 

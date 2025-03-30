@@ -1,4 +1,4 @@
-# Using Attention in Computer Vision
+# Attention in Computer Vision
 
 This blog surveys set of DNN architectures in Computer Vision that uses attention.
 
@@ -66,6 +66,23 @@ This blog surveys set of DNN architectures in Computer Vision that uses attentio
 </p>
 
 * PVTv2 seems to show better performance on object detection but Swin transformer still shows comparable performance. In future research it probably makes sense to try either (or in the case of domain-specific vision such as LiDAR 3D perception use SWFormer)
+
+## Vision Transformer with Deformable Attention
+[[ArXiv]](https://openaccess.thecvf.com/content/CVPR2022/papers/Xia_Vision_Transformer_With_Deformable_Attention_CVPR_2022_paper.pdf)
+
+<p align="center">
+<img src="../images/deformable_vit.png" alt="ViT and Deformable Convolutional Network Comparison" width="80%"/>
+</p>
+
+* ViT's use of attention reduces inducive bias and allows the network aggregate information both locally and globally, but induces O(n^{2}) compute cost while the model may attend to irrelevant or noisy details in the input
+* Propose alternatives PVT and SWin so far do significantly reduce memory through either hierarchical compression or within-window local attention, but both are data-agnostic design and therefore fail to adapt to data.
+* Deformable Convolution allows data-aware relation learning, and in partiular authors adopt the idea to build deformable attention - where positions of key,value are seleted data-depently
+
+<p align="center">
+<img src="../images/deform_attn.png" alt="Proposed Deformable Attention" width="100%"/>
+</p>
+
+
 
 ## Image GPT
 

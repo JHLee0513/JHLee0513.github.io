@@ -1,0 +1,1 @@
+sam2point --> voxelize pointcloud, then processed in each xyz direction (forwrad,backward) feed each plane as a frame to SAM2, esseentially processing 6 videos and aggregatng the output mask for final prediction.
